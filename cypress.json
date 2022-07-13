@@ -1,0 +1,11 @@
+{    
+    "chromeWebSecurity": false,
+    "testFiles": "**/*.feature",
+    "baseUrl": "https://reqres.in/",
+    "defaultCommandTimeout": 20000,
+
+    "env": {
+      "URL": "https://reqres.in/"
+    }
+
+  }

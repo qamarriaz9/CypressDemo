@@ -1,0 +1,293 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Validation of regres.in web service",
+    "line": 1,
+    "id": "validation-of-regres.in-web-service",
+    "tags": [],
+    "uri": "RestAPIDemo.feature",
+    "elements": [
+      {
+        "id": "validation-of-regres.in-web-service;retrieve-multiple-users-of-a-page-and-verify-response-parameter",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Retrieve multiple users of a page and verify response parameter",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "email",
+                      "firstname",
+                      "lastname",
+                      "avatar",
+                      "statuscode",
+                      "uri"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "george.bluth@reqres.in",
+                      "George",
+                      "Bluth",
+                      "https://reqres.in/img/faces/1-image.jpg",
+                      "200",
+                      "api/users?page=1"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "janet.weaver@reqres.in",
+                      "Janet",
+                      "Weaver",
+                      "https://reqres.in/img/faces/2-image.jpg",
+                      "200",
+                      "api/users?page=1"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user performs get operation to retrieve multiple users",
+            "result": {
+              "status": "passed",
+              "duration": 1502000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "validation-of-regres.in-web-service;retrieve-single-user-users-and-verify-response-parameter",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Retrieve single user users and verify response parameter",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "email",
+                      "firstname",
+                      "lastname",
+                      "avatar",
+                      "statuscode",
+                      "uri"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "emma.wong@reqres.in",
+                      "Emma",
+                      "Wong",
+                      "https://reqres.in/img/faces/3-image.jpg",
+                      "200",
+                      "api/users/3"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "user performs get operation to retrieve a single user",
+            "result": {
+              "status": "passed",
+              "duration": 728000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "validation-of-regres.in-web-service;verify-creation-of-a-new-user-using-post-operation",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Verify creation of a new user using POST operation",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "payload",
+                      "statuscode",
+                      "uri"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "{\"name\": \"QA Test1\",\"job\": \"QA Engineer1\"}",
+                      "201",
+                      "api/users"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "{\"name\": \"QA Test2\",\"job\": \"QA Engineer2\"}",
+                      "201",
+                      "api/users"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "user performs post operation to create a user",
+            "result": {
+              "status": "passed",
+              "duration": 1649000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "validation-of-regres.in-web-service;verify-update-user-api-functionality-using-put-operation",
+        "keyword": "Scenario",
+        "line": 21,
+        "name": "Verify update user api functionality using PUT operation",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "payload",
+                      "statuscode",
+                      "uri"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "{\"name\": \"QA Test1 Updated\",\"job\": \"QA Engineer1 Updated\"}",
+                      "200",
+                      "api/users/4"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 22,
+            "name": "user performs put operation to update a user",
+            "result": {
+              "status": "passed",
+              "duration": 625000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "validation-of-regres.in-web-service;verify-update-user-api-functionality-using-patch-operation",
+        "keyword": "Scenario",
+        "line": 26,
+        "name": "Verify update user api functionality using PATCH operation",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "payload",
+                      "statuscode",
+                      "uri"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "{\"name\": \"QA Test1 Updated\",\"job\": \"QA Engineer1 Updated\"}",
+                      "200",
+                      "api/users/5"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 27,
+            "name": "user performs patch operation to update a user",
+            "result": {
+              "status": "passed",
+              "duration": 631000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "validation-of-regres.in-web-service;verify-delete-user-api-functionality-using-delete-operation",
+        "keyword": "Scenario",
+        "line": 31,
+        "name": "Verify delete user api functionality using DELETE operation",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "statuscode",
+                      "uri"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "204",
+                      "api/users/5"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 32,
+            "name": "user performs delete operation to delete a user",
+            "result": {
+              "status": "passed",
+              "duration": 628000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "validation-of-regres.in-web-service;verify-get-operation-using-fixture",
+        "keyword": "Scenario",
+        "line": 36,
+        "name": "Verify get operation using fixture",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 37,
+            "name": "user performs get operation and verify data from fixture",
+            "result": {
+              "status": "passed",
+              "duration": 215000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

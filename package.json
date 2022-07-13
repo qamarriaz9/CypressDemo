@@ -1,0 +1,34 @@
+{
+  "name": "cypressautomatione2e",
+  "version": "1.0.0",
+  "description": "Cypress E2E Automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress": "cypress open"
+  },
+  "keywords": [
+    "Cypress",
+    "E2E",
+    "Automation"
+  ],
+  "author": "Qamar Riaz",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^8.5.0"
+  },
+  "devDependencies": {
+    "cypress-cucumber-preprocessor": "^4.3.0",
+    "cypress-xpath": "^1.6.2",
+    "multiple-cucumber-html-reporter": "^1.21.4"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}
